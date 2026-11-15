@@ -20,8 +20,6 @@ const tarefasIniciais = [
   { id: '3', titulo: 'Fazer atividade', descricao: 'Finalizar os exercícios da faculdade.', concluida: false }
 ];
 
-/* ========================== COMPONENTES ========================== */
-
 function Botao({ titulo, aoPressionar, tipo = 'principal' }) {
   return (
     <Pressable
@@ -64,8 +62,6 @@ function Card({ titulo, subtitulo, concluida, aoPressionar, aoConcluir }) {
     </Pressable>
   );
 }
-
-/* ============================= TELAS ============================= */
 
 function Home({ navigation, tarefas, carregando, aoAlternar }) {
   const [filtro, setFiltro] = useState('Todas');
@@ -187,8 +183,6 @@ function Formulario({ navigation, aoSalvar }) {
   );
 }
 
-/* ============================== APP ============================== */
-
 export default function App() {
   const [tarefas, setTarefas] = useState([]);
   const [carregando, setCarregando] = useState(true);
@@ -250,8 +244,6 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-/* ============================ ESTILOS ============================ */
 
 const stylesBotao = StyleSheet.create({
   botao: { paddingVertical: 13, paddingHorizontal: 18, borderRadius: 10, alignItems: 'center', marginVertical: 6 },
